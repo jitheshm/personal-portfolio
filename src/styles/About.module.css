@@ -1,0 +1,35 @@
+.aboutContainer {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .aboutHead {
+    text-align: center;
+  }
+  
+  .about {
+    text-align: justify;
+  }
+  
+  .aboutDetailsContainer span {
+    min-width: 25%;
+    display: inline-block;
+  }
+  
+  .aboutDetailsContainer {
+    /*text-align: center;*/
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .aboutInterests {
+    display: flex;
+    gap: 30px;
+  }
+  
+  .interestData {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }

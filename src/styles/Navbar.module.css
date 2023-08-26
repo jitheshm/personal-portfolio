@@ -1,0 +1,41 @@
+.navbar {
+    background-color: #000024;
+    height: 60px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .icon {
+    width: 56px;
+    height: 47px;
+    /*background-color: white;*/
+    color: #ffffff;
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .iconContainer {
+    display: flex;
+    /*justify-content: space-between;*/
+    gap: 10px;
+  }
+
+  .iconName {
+    font-size: 11px;
+    font-weight: 449;
+  }
+
+  .icon:hover {
+    color: #E35062;
+  }
+  
+  .icon:focus {
+    border: solid;
+    border-color: #ffffff;
+    border-width: 1px;
+  }
