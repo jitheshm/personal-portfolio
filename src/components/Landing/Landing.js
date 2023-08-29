@@ -1,10 +1,12 @@
+import Image from 'next/image'
 import React from 'react'
 import styles from '../../styles/Landing.module.css'
 function Landing() {
     return (
         <div className={`container-fluid ${styles.containerBox}`}>
             <div className={`col-12 col-md-6 ${styles.landingRight}`}>
-                <div className={styles.loader1}><span /><span /><span /><span /><span /></div>
+            <div className={`${styles.imgContainer} ps-4`}><Image src="/propic.png" width={220} height={215} /></div>
+
             </div>
             <div className={`col-12 col-md-6 ${styles.landingRight}`}>
                 <div className="col-11">
