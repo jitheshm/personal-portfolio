@@ -37,7 +37,11 @@
   
   .socialIconContainer {
     display: flex;
-    gap: 7px;
+    flex-direction: column;
+    position: absolute;
+    top: 245px;
+    right: 0;
+    gap: 15px;
   }
   
   .socialIcon.wtsp {
