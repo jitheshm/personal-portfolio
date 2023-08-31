@@ -1,0 +1,30 @@
+
+.skillContainer {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .skillCard {
+    height: 100px;
+    /*background-color: #010118;*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border: solid;
+    border-width: 2px;
+  }
+  
+  .skillBox {
+    display: flex;
+    gap: 10%;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .skillImg {
+    
+    width: 45px;
+  }
+  
