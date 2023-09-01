@@ -5,7 +5,7 @@ import styles from '../../styles/Skills.module.css'
 function Skills() {
   return (
    <div className={`container-fluid ${styles.skillContainer} mt-5`}>
-  <div className={`col-md-8 ${styles.skillBox} ps-4`}>
+  <div className={`col-sm-9 col-md-8 ${styles.skillBox} px-4`}>
     <div className={`${styles.skillCard} col-4 col-md-3 col-lg-2 mt-4`}>
       <div><Image   className={styles.skillImg} src="/skills/HTML5_Badge_512.png" width={45} height={40}/></div><span>HTML</span>
     </div>
@@ -29,6 +29,9 @@ function Skills() {
     </div>
     <div className={`${styles.skillCard} col-4 col-md-3 col-lg-2 mt-4`}>
       <div><Image  className={styles.skillImg} src="/skills/MongoDB_SpringGreen.png" width={45} height={15} /></div><span>MongoDB</span>
+    </div>
+    <div className={`${styles.skillCard} col-4 col-md-3 col-lg-2 mt-4`}>
+      <div><Image  className={styles.skillImg} src="/skills/expressjs.png" width={45} height={40} /></div><span>MongoDB</span>
     </div>
   </div>
 </div>
