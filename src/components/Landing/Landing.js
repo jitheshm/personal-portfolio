@@ -12,7 +12,7 @@ function Landing() {
                 <div className="col-11">
                     <h6>Hii,&nbsp; I'M&nbsp;<span style={{ color: 'rgb(227, 80, 98)' }}>JITHESH</span></h6>
                     <h4><strong>WEB DEVELOPER</strong></h4>
-                    <div className="col-md-8 mb-3"><em>Proficient in the MERN stack, I skillfully craft streamlined interfaces, harmoniously integrating my expertise to elevate the quality of digital experiences.</em></div>{/* Start: social media icons */}
+                    <div className="col-md-8 mb-3"><em>"Passionate MERN stack developer dedicated to crafting powerful web applications with a focus on delivering exceptional user experiences."</em></div>{/* Start: social media icons */}
                     <div className={`${styles.socialIconContainer} px-3`}>
                         <a target="_blank" href='https://wa.me/9072922178' rel="noopener noreferrer">
                             <div className={`${styles.socialIcon} ${styles.wtsp}`}><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" className="bi bi-whatsapp social-icon-inner">
