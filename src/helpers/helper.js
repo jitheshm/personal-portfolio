@@ -11,5 +11,13 @@ module.exports = {
             })
         })
 
+    },
+    getProjects: () => {
+        return new Promise(async(resolve, reject) => {
+            const db=await getDb();
+            db.collection("project").find().sort({_id:-1}).toArray().then((res) => {
+                resolve(res)
+            })
+        })
     }
 }
