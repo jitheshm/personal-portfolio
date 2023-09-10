@@ -54,5 +54,14 @@ module.exports = {
             })
 
         })
+    },
+    deleteProject:(pid)=>{
+        return new Promise((resolve, reject) => {
+            getDb().then((db)=>{
+                db.collection("project").findOneAndDelete({ "_id": new ObjectId(pid) }).then((res) => {
+                    resolve(res)
+                })
+            })
+        })
     }
-}
+} 
