@@ -32,12 +32,23 @@ export default async function handler(req, res) {
       res.status(400).json({ error: 'No file uploaded.' });
       return;
     }
-    const result = await cloudinary.uploader.upload(`${file[0].filepath}`);
-    console.log(result);
-    data.imageUrl = result.secure_url;
-    addProject(data).then((response) => {
-      res.status(200).json({ message: 'Project added successfully.' });
+    cloudinary.uploader.upload(`${file[0].filepath}`).then((result) => {
+
+      console.log(result);
+      data.imageUrl = result.secure_url;
+      data.imagePublic_id = result.public_id;
+      addProject(data).then((response) => {
+        res.status(200).json({ message: 'Project added successfully.' });
+      }).catch((err) => {
+        cloudinary.uploader.destroy(result.public_id).then((result) => {
+          console.log(result);
+          res.status(400).json({ message: 'Project added failed.' });
+        })
+      })
+    }).catch(()=>{
+      res.status(400).json({ message: 'Project added failed.' });
     })
+
 
   });
 }

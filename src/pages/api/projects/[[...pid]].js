@@ -6,6 +6,8 @@ export default function handler(req, res) {
   getProjects(pid).then((response) => {
     
     res.status(200).json({ projects: response })
+  }).catch(()=>{
+    res.status(400).json({ message: 'get project failed.' });
   })
     
   }
