@@ -35,7 +35,7 @@ export default async function handler(req, res) {
     cloudinary.uploader.upload(`${file[0].filepath}`).then((result) => {
 
       console.log(result);
-      data.imageUrl = result.secure_url;
+      data.imageUrl = `https://res.cloudinary.com/dsxnkdv2k/image/upload/${result.public_id}.${result.format}`
       data.imagePublic_id = result.public_id;
       addProject(data).then((response) => {
         res.status(200).json({ message: 'Project added successfully.' });
