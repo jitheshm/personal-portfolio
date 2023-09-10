@@ -21,7 +21,7 @@ module.exports = {
         return new Promise(async (resolve, reject) => {
             getDb().then((db) => {
                 if (pid) {
-                    db.collection("project").findOne({ "_id": new ObjectId(pid[0]) }).then((res) => {
+                    db.collection("project").findOne({ "_id": new ObjectId(pid) }).then((res) => {
                         resolve(res)
                     })
                 }
