@@ -1,8 +1,11 @@
+import Landing from '@/components/Admin/Landing/Landing'
 import React from 'react'
 
-function index() {
+function index({datas}) {
+    
     return (
-        <div>index</div>
+        
+        <Landing datas={datas}/>
     )
 }
 

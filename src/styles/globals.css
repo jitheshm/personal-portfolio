@@ -1,15 +1,26 @@
 body {
-    background-color: #000024;
-    color: #ffffff;
-    overflow-x: overlay;
-  }
+  background-color: #000024;
+  color: #ffffff;
+  overflow-x: overlay;
+}
 
 
-  h1 {
-    font-weight: 352;
-  }
-  
-  a{
-    text-decoration: none;
-    color: #ffffff;
-  }
+h1 {
+  font-weight: 352;
+}
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+td{
+  max-width: 100px;
+}
+
+td p{
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
