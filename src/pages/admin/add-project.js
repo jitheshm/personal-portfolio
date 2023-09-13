@@ -1,7 +1,11 @@
 import axios from 'axios'
+import { useRouter } from 'next/router'
+
+
 import React from 'react'
 
 function addProject() {
+    const router=useRouter()
     const OnSubmit = (event) => {
         event.preventDefault()
 
@@ -10,6 +14,9 @@ function addProject() {
             'Content-Type': 'multipart/form-data'
         }).then((res)=>{
             console.log(res);
+            alert(res.data.message)
+            router.push('/admin')
+
         })
         
     }
