@@ -1,9 +1,9 @@
 import DetailsForm from '@/components/Admin/Form/DetailsForm'
 import React from 'react'
 
-function addProject({data}) {
+function addProject() {
   return (
-    <DetailsForm  />
+    <DetailsForm title="Enter" action="Submit" />
       )
 }
 

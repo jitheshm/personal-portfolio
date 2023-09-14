@@ -4,8 +4,10 @@ import { useRouter } from 'next/router'
 
 import React from 'react'
 
-function DetailsForm({data}) {
+function DetailsForm({data,title,action}) {
     const router=useRouter()
+    
+    const {name,category,description,language,github,host}=data||{}
     const OnSubmit = (event) => {
         event.preventDefault()
 
@@ -23,39 +25,39 @@ function DetailsForm({data}) {
 
     return (
         <div className='container-fluid' style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
-            <h3 className='mt-4'>Enter Project Details</h3>
+            <h3 className='mt-4'>{title} Project Details</h3>
             <form onSubmit={OnSubmit} encType="multipart/form-data" className='col-5 my-4' style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
                 <div className="form-group">
                     <label >Project Name</label>
-                    <input type="text" name='name' className="form-control" placeholder="Enter Project Name" />
+                    <input type="text" defaultValue={name} name='name' className="form-control" placeholder="Enter Project Name" />
 
                 </div>
                 <div className="form-group">
                     <label >Category</label>
-                    <input type="text" name='category' className="form-control" placeholder="Enter category" />
+                    <input type="text" defaultValue={category} name='category' className="form-control" placeholder="Enter category" />
                 </div>
                 <div className="form-group">
                     <label >Description</label>
-                    <textarea type="text" name='description' className="form-control" placeholder="Enter description" />
+                    <textarea type="text" defaultValue={description} name='description' className="form-control" placeholder="Enter description" />
                 </div>
                 <div className="form-group">
                     <label >Language</label>
-                    <input type="text" name='language' className="form-control" placeholder="Enter language" />
+                    <input type="text" defaultValue={language} name='language' className="form-control" placeholder="Enter language" />
                 </div>
                 <div className="form-group">
                     <label >Github link</label>
-                    <input type="url" name='github' className="form-control" placeholder="Enter Github link" />
+                    <input type="url" defaultValue={github} name='github' className="form-control" placeholder="Enter Github link" />
                 </div>
                 <div className="form-group">
                     <label >Host link</label>
-                    <input type="url" name='host' className="form-control" placeholder="Enter Host link" />
+                    <input type="url" defaultValue={host} name='host' className="form-control" placeholder="Enter Host link" />
                 </div>
                 <div className="form-group">
                     <label >Image</label>
                     <input type="file" name='image' className="form-control" />
                 </div>
 
-                <button type="submit" className="btn btn-primary">Submit</button>
+                <button type="submit" className="btn btn-primary">{action}</button>
             </form>
 
         </div>
