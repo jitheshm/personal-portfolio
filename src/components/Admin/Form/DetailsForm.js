@@ -4,7 +4,7 @@ import { useRouter } from 'next/router'
 
 import React from 'react'
 
-function DetailsForm({data,title,action}) {
+function DetailsForm({data,title,action,api}) {
     const router=useRouter()
     
     const {name,category,description,language,github,host}=data||{}
@@ -12,7 +12,7 @@ function DetailsForm({data,title,action}) {
         event.preventDefault()
 
         const formData = new FormData(event.target)
-        axios.post('/api/add-project',formData,{
+        axios.post(`/api/${api}`,formData,{
             'Content-Type': 'multipart/form-data'
         }).then((res)=>{
             console.log(res);
