@@ -4,7 +4,7 @@ import { useRouter } from 'next/router'
 
 import React from 'react'
 
-function DetailsForum({data}) {
+function DetailsForm({data}) {
     const router=useRouter()
     const OnSubmit = (event) => {
         event.preventDefault()
@@ -62,4 +62,4 @@ function DetailsForum({data}) {
     )
 }
 
-export default DetailsForum
+export default DetailsForm

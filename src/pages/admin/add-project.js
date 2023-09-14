@@ -1,9 +1,9 @@
-import DetailsForum from '@/components/Admin/Form/DetailsForum'
+import DetailsForm from '@/components/Admin/Form/DetailsForm'
 import React from 'react'
 
 function addProject({data}) {
   return (
-    <DetailsForum  />
+    <DetailsForm  />
       )
 }
 
