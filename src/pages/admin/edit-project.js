@@ -22,7 +22,7 @@ function editProject() {
     }, [router.query.pid])
     if (loading) return <h4>Loading...</h4>
     return (
-        <DetailsForm title="Edit" action="Update" data={data} />
+        <DetailsForm title="Edit" action="Update" data={data} api='update-project' />
     )
 }
 

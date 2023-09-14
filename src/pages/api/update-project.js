@@ -9,44 +9,44 @@ export const config = {
 };
 
 export default async function handler(req, res) {
-    console.log(req.query.pid);
+  console.log(req.query.pid);
   const form = new IncomingForm();
 
   form.parse(req, async (error, fields, files) => {
-    if (error) {
-      res.status(500).json({ error: 'File upload failed.' });
-      return;
+    
+    const data = {
+      name: fields.name[0],
+      category: fields.category[0],
+      description: fields.description[0],
+      language: fields.language[0],
+      github: fields.github[0],
+      host: fields.host[0],
+    };
+    console.log(data);
+    const { image } = files;
+
+
+    if (image) {
+      updateProject(req.query.pid, data).then((response) => {
+        console.log(response);
+
+        return cloudinary.uploader.upload(`${image[0].filepath}`, {
+          public_id: response.imagePublic_id,
+        })
+
+      }).then((result) => {
+        res.status(200).json({ message: 'Project updated successfully.' });
+      }).catch(() => {
+        res.status(400).json({ error: 'failed' });
+      })
+    } else {
+      updateProject(req.query.pid, data).then((result) => {
+        res.status(200).json({ message: 'Project updated successfully.' });
+      }).catch(() => {
+        res.status(400).json({ error: 'failed' });
+      })
     }
 
-    // Access other form data (non-file inputs)
-    var { name, category, description } = fields;
-    name = JSON.parse(name[0]);
-    category = JSON.parse(category[0])
-    description = JSON.parse(description[0]);
-    const data = {
-      name, category, description
-    }
-    console.log(data);
-    const { file } = files;
-    console.log(file[0].filepath);
-    if (!file) {
-      res.status(400).json({ error: 'No file uploaded.' });
-      return;
-    }
-    updateProject(req.query.pid,data).then((response) => {
-        console.log(response);
-        
-            cloudinary.uploader.upload(`${file[0].filepath}`,{
-                public_id: response.imagePublic_id,
-              }).then((result) => {
-                res.status(200).json({ message: 'Project updated successfully.' });
-              }).catch(()=>{
-                console.log("error");
-                res.status(400).json({ message: 'Project updation failed' });
-              })
-        
-    })
-    
 
 
   });
