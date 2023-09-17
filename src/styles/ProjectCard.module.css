@@ -1,0 +1,24 @@
+.projectCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: initial;
+    border: solid;
+    border-width: 1px;
+    /*background-color: #00001A;*/
+    /*height: 250px;*/
+    border-radius: 10px;
+  }
+  
+  
+  .projectCardBody {
+    text-align: center;
+  }
+  
+  @media (max-width: 767px) {
+    .projectCardContainer {
+      justify-content: center;
+    }
+  }
+  
+  

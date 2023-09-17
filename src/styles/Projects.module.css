@@ -1,0 +1,10 @@
+.projectContainer {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .projectCardContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10%;
+  }
