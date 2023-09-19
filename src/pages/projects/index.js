@@ -10,7 +10,7 @@ function index({projectData}) {
 export default index
 
 export async function getServerSideProps() {
-    const response = await fetch('http://localhost:3000/api/projects')
+    const response = await fetch(`${process.env.BASE_URL}/api/projects`)
     const repo = await response.json()
     //console.log(repo);
     return {
