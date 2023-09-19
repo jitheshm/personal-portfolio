@@ -1,13 +1,13 @@
 import Projects from '@/components/Projects/Projects'
 import React from 'react'
 
-function projects({projectData}) {
+function index({projectData}) {
   return (
     <Projects projectData={projectData}/>
   )
 }
 
-export default projects
+export default index
 
 export async function getServerSideProps() {
     const response = await fetch('http://localhost:3000/api/projects')
