@@ -1,4 +1,4 @@
-import { updateProject } from '@/helpers/helper';
+import { updateProject } from '@/helpers/projectHelper';
 import { IncomingForm } from 'formidable';
 import cloudinary from '@/lib/cloudinary'
 

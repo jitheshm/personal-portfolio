@@ -1,4 +1,4 @@
-import { deleteProject } from "@/helpers/helper";
+import { deleteProject } from "@/helpers/projectHelper";
 import cloudinary from "@/lib/cloudinary";
 
 

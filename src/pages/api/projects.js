@@ -1,4 +1,4 @@
-import { getProjects } from "@/helpers/helper"
+import { getProjects } from "@/helpers/projectHelper"
 
 export default function handler(req, res) {
   const { pid } = req.query
