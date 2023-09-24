@@ -15,7 +15,9 @@ function editProject() {
     console.log("first" + router.query.pid);
     useEffect(() => {
         if(status==="unauthenticated"){
-            signIn()
+            signIn({
+                callbackUrl: '/admin'
+            })
         }
 
         if (router.query.pid&&status!="unauthenticated") {

@@ -13,7 +13,9 @@ function addProject() {
   useEffect(() => {
       if (status === "unauthenticated") {
 
-          signIn()
+          signIn({
+              callbackUrl: '/admin'
+          })
 
       } else {
           setLoading(false)

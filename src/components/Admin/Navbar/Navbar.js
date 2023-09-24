@@ -1,3 +1,4 @@
+import { signOut } from 'next-auth/react'
 import React from 'react'
 
 function Navbar() {
@@ -12,7 +13,9 @@ function Navbar() {
                     <div  style={{display:"flex",justifyContent:"end"}}>
                        
                         <div className="d-flex align-items-center">
-                            <button type="button" className="btn btn-link px-3 me-2" style={{color:"#ffffff" }}>
+                            <button type="button" className="btn btn-link px-3 me-2" style={{color:"#ffffff" }}
+                            onClick={()=>signOut()}
+                            >
                                 Logout
                             </button>
 
