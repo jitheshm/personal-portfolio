@@ -7,7 +7,7 @@ function ProjectCard({project}) {
             <div className={styles.projectImage}><img src={project.imageUrl} width="100%" /></div>
             <div className={`col-12 ${styles.projectCardBody} py-2`}>
                 <h6 className="mt-2">{project.name}</h6>
-                <h6 className="my-3">{project.category}</h6><button className="btn" type="button">Read More</button>
+                <h6 className="my-3">{project.category}</h6><button className={`btn ${styles.cardbtn}`}type="button">Read More</button>
             </div>
         </div>)
 }

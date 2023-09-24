@@ -26,10 +26,10 @@ td p{
 }
 .btn {
   border-radius: 36px;
-  background-color: #49c95a;
+  
 }
 
 .btn:hover {
-  background-color: #49c95a;
+  
   color: #000024;
 }

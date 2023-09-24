@@ -14,6 +14,13 @@
   .projectCardBody {
     text-align: center;
   }
+  .cardbtn{
+    background-color: #49c95a;;
+  }
+  .cardbtn:hover{
+    background-color: #49c95a;
+    color: #000024;
+  }
   
   @media (max-width: 767px) {
     .projectCardContainer {
