@@ -4,6 +4,7 @@ import NextAuth from 'next-auth'
 import Credentials from "next-auth/providers/credentials";
 
 export default NextAuth({
+ 
   providers: [
     Credentials({
       // The name to display on the sign-in form (e.g., 'Sign in with...')
@@ -16,13 +17,14 @@ export default NextAuth({
         // Add your authentication logic here
         const user=await getAdmin(credentials)
         
+
           console.log(user);
           if (user) {
             console.log("success");
-            return Promise.resolve(user)
+            return user
           } else {
             console.log("failed");
-            return Promise.resolve(null)
+            return null
           }
         
 
@@ -36,19 +38,24 @@ export default NextAuth({
   session: {
     jwt: true,
   },
+  jwt:{
+    secret: process.env.NEXTAUTH_SECRET,
+  },
   
   callbacks: {
-    async jwt(token, user) {
-     
+    async jwt({token, user}) {
+      console.log(user);
       if (user) {
         token.id = user._id
         token.email = user.email // Replace with your user's email
-        token.name="admin"
+        token.name = "admin" // Replace with your user's name
+        token.picture=null
       }
       return token
     },
-    async session(session, token) {
+    async session({session, token}) {
       session.user = token
+       console.log(session);
       return session
     },
     

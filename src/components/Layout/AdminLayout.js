@@ -1,12 +1,12 @@
 import React from 'react'
 import Navbar from '../Admin/Navbar/Navbar'
-
-function AdminLayout({ children }) {
+import { SessionProvider } from "next-auth/react"
+function AdminLayout({session, children }) {
     return (
-        <>
+        <SessionProvider session={session}>
             <Navbar />
             <main>{children}</main>
-        </>
+        </SessionProvider>
     )
 }
 
