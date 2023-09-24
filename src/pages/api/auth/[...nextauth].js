@@ -4,7 +4,12 @@ import NextAuth from 'next-auth'
 import Credentials from "next-auth/providers/credentials";
 
 export default NextAuth({
- 
+  theme: {
+    colorScheme: "dark", // "auto" | "dark" | "light"
+    brandColor: "", // Hex color code
+    logo: "", // Absolute URL to image
+    buttonText: "" // Hex color code
+  },
   providers: [
     Credentials({
       // The name to display on the sign-in form (e.g., 'Sign in with...')
@@ -13,6 +18,7 @@ export default NextAuth({
         email: { label: "Email", type: "text" },
         password: { label: "Password", type: "password" }
       },
+      
       authorize: async (credentials) => {
         // Add your authentication logic here
         const user=await getAdmin(credentials)
