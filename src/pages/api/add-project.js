@@ -40,7 +40,7 @@ export default function handler(req, res) {
       cloudinary.uploader.upload(`${image[0].filepath}`, { folder: "portfolio_website" }).then((result) => {
 
         console.log(result);
-        data.imageUrl = `https://res.cloudinary.com/dsxnkdv2k/image/upload/${result.public_id}.${result.format}`
+        data.imageUrl = result.secure_url
         data.imagePublic_id = result.public_id;
         addProject(data).then((response) => {
           res.status(200).json({ message: 'Project added successfully.' });

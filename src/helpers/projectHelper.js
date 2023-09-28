@@ -40,12 +40,7 @@ module.exports = {
     updateProject: (pid, data) => {
         return new Promise(async (resolve, reject) => {
             getDb().then((db) => {
-                db.collection("project").findOneAndUpdate({ "_id": new ObjectId(pid) }, { $set: {
-                    name: data.name,
-                    category: data.category,
-                    description: data.description,
-
-                } },{returnDocument: "after"}
+                db.collection("project").findOneAndUpdate({ "_id": new ObjectId(pid) }, { $set: data },{returnDocument: "after"}
                 ).then((res) => {
                     resolve(res)
                 })

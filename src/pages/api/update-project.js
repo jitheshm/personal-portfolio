@@ -16,7 +16,7 @@ export default async function handler(req, res) {
 
     form.parse(req, async (error, fields, files) => {
 
-      const data = {
+      var data = {
         name: fields.name[0],
         category: fields.category[0],
         description: fields.description[0],
@@ -25,22 +25,28 @@ export default async function handler(req, res) {
         host: fields.host[0],
       };
       console.log(data);
+      const imagePublic_id = fields.imagePublic_id[0]
       const { image } = files;
 
 
       if (image) {
-        updateProject(req.query.pid, data).then((response) => {
-          console.log(response);
-
-          return cloudinary.uploader.upload(`${image[0].filepath}`, {
-            public_id: response.imagePublic_id,
-          })
-
-        }).then((result) => {
-          res.status(200).json({ message: 'Project updated successfully.' });
-        }).catch(() => {
-          res.status(400).json({ error: 'failed' });
+        cloudinary.uploader.upload(`${image[0].filepath}`, {
+          public_id: imagePublic_id,
         })
+          .then((response) => {
+            console.log(response);
+            console.log("hai");
+            data={
+              ...data,
+              imageUrl:response.secure_url
+            }
+            console.log(data);
+            return updateProject(req.query.pid, data)
+          }).then((result) => {
+            res.status(200).json({ message: 'Project updated successfully.' });
+          }).catch((error) => {
+            res.status(400).json({ error: 'failed',error });
+          })
       } else {
         updateProject(req.query.pid, data).then((result) => {
           res.status(200).json({ message: 'Project updated successfully.' });

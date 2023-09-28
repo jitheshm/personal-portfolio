@@ -7,11 +7,12 @@ import React from 'react'
 function DetailsForm({data,title,action,api}) {
     const router=useRouter()
     
-    const {name,category,description,language,github,host,_id}=data||{}
+    const {name,category,description,language,github,host,_id,imagePublic_id}=data||{}
     const OnSubmit = (event) => {
         event.preventDefault()
 
         const formData = new FormData(event.target)
+        formData.append('imagePublic_id',imagePublic_id)
         axios.post(`/api/${api}?pid=${_id}`,formData,{
             'Content-Type': 'multipart/form-data'
         }).then((res)=>{
