@@ -25,11 +25,12 @@ export default async function handler(req, res) {
         host: fields.host[0],
       };
       console.log(data);
-      const imagePublic_id = fields.imagePublic_id[0]
+      
       const { image } = files;
 
 
       if (image) {
+        const imagePublic_id = fields.imagePublic_id[0]
         cloudinary.uploader.upload(`${image[0].filepath}`, {
           public_id: imagePublic_id,
         })
