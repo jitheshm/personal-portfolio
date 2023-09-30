@@ -47,14 +47,14 @@ function Table() {
 
                                 </td>
                                 <td>
-                                    <p className="fw-normal mb-1">{data.description}</p>
+                                    
                                 </td>
                                 <td>{data.language}</td>
                                 <td>
-                                    <a href={data.github} style={{ color: "black" }}>{data.github}</a>
+                                    <a href={data.github} style={{ color: "black" }}><p className="fw-normal mb-1">{data.github}</p></a>
                                 </td>
                                 <td>{
-                                    data.hosting ? <a href={data.hosting} style={{ color: "black" }}>{data.hosting}</a> : "Not hosted"
+                                    data.host ? <a href={data.host} style={{ color: "black" }}><p className="fw-normal mb-1">{data.host}</p></a> : "Not hosted"
                                 }
 
                                 </td>
