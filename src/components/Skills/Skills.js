@@ -33,6 +33,9 @@ function Skills() {
     <div className={`${styles.skillCard} col-5 col-md-3 col-lg-2 mt-4`}>
       <div><Image  className={styles.skillImg} src="/skills/expressjs.png" width={45} height={40} /></div><span>EXPRESS JS</span>
     </div>
+    <div className={`${styles.skillCard} col-5 col-md-3 col-lg-2 mt-4`}>
+      <div><Image  className={styles.skillImg} src="/skills/Git-Icon.png" width={45} height={40} /></div><span>GIT</span>
+    </div>
   </div>
 </div>
 
