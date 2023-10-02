@@ -36,9 +36,7 @@ function index({ projectData }) {
 
 export default index
 export async function getServerSideProps({ req, res }) {
-    const response = await fetch(`${process.env.BASE_URL}/api/projects`)
-    const repo = await response.json()
-    //console.log(repo);
+
     const session = await getServerSession(req, res, authOptions)
     //console.log(session);
     if (!session) {
@@ -48,13 +46,17 @@ export async function getServerSideProps({ req, res }) {
             }
         }
     }
-    else{
-    return {
-        props: {
-            admin: true,
-            projectData: repo.projects,
-            session: session
+    else {
+
+        const response = await fetch(`${process.env.BASE_URL}/api/projects`)
+        const repo = await response.json()
+        //console.log(repo);
+        return {
+            props: {
+                admin: true,
+                projectData: repo.projects,
+                session: session
+            }
         }
-    }
     }
 }
