@@ -1,24 +1,31 @@
 import React from 'react'
 import ProjectCard from './ProjectCard'
-import styles from '../../styles/Projects.module.css'
 
-function Projects({projectData}) {
+
+function Projects({ projectData }) {
     return (
-        <div className={`container-fluid ${styles.projectContainer}`}>
-            <div className={`col-md-8 ${styles.projectCardContainer} mb-5`}>
-                {
-                    projectData.map((project)=>{
-                        return(
-                            <ProjectCard project={project}/>
-                        )
-                    })
-                }
-                
-                
-            </div>
-        </div>
 
-  )
+        <section className="section" id='projects'>
+            <div className="container">
+                <div className="row">
+                    <div className="col-12 text-center">
+                        <h3 className="section-title">My Projects</h3>
+                    </div>
+                </div>
+                <div className="row shuffle-wrapper">
+
+                    {
+                        projectData.map((project) => {
+                            return (
+                                <ProjectCard project={project} />
+                            )
+                        })
+                    }
+                </div>
+            </div>
+        </section>
+
+    )
 }
 
 export default Projects

@@ -1,43 +1,56 @@
 import Image from 'next/image'
 import React from 'react'
-import styles from '../../styles/Skills.module.css'
+
 
 function Skills() {
   return (
-   <div className={`container-fluid ${styles.skillContainer} mt-5`}>
-  <div className={`col-sm-9 col-md-8 ${styles.skillBox} px-4`}>
-    <div className={`${styles.skillCard} col-5 col-md-3 col-lg-2 mt-4`}>
-      <div><Image   className={styles.skillImg} src="/skills/HTML5_Badge_512.png" width={45} height={40}/></div><span>HTML</span>
-    </div>
-    <div className={`${styles.skillCard} col-5 col-md-3 col-lg-2 mt-4`}>
-      <div><Image  className={styles.skillImg} src="/skills/CSS3_logo.svg.png" width={45} height={40}/></div><span>CSS</span>
-    </div>
-    <div className={`${styles.skillCard} col-5 col-md-3 col-lg-2 mt-4`}>
-      <div><Image  className={styles.skillImg} src="/skills/JavaScript-logo.png" width={45} height={40}/></div><span>JAVASCRIPT</span>
-    </div>
-    <div className={`${styles.skillCard} col-5 col-md-3 col-lg-2 mt-4`}>
-      <div><Image  className={styles.skillImg} src="/skills/Bootstrap_logo.svg.png" width={45} height={40}/></div><span>BOOTSTRAP</span>
-    </div>
-    <div className={`${styles.skillCard} col-5 col-md-3 col-lg-2 mt-4`}>
-      <div><Image  className={styles.skillImg} src="/skills/React-icon.svg.png" width={45} height={40}/></div><span>REACT</span>
-    </div>
-    <div className={`${styles.skillCard} col-5 col-md-3 col-lg-2 mt-4`}>
-      <div><Image  className={styles.skillImg} src="/skills/2560px-Node.js_logo.svg.png" width={45} height={40}/></div><span>NODE JS</span>
-    </div>
-    <div className={`${styles.skillCard} col-5 col-md-3 col-lg-2 mt-4`}>
-      <div><Image  className={styles.skillImg} src="/skills/download.png" width={45} height={40} /></div><span>NEXT JS</span>
-    </div>
-    <div className={`${styles.skillCard} col-5 col-md-3 col-lg-2 mt-4`}>
-      <div><Image  className={styles.skillImg} src="/skills/MongoDB_SpringGreen.png" width={45} height={15} /></div><span>MongoDB</span>
-    </div>
-    <div className={`${styles.skillCard} col-5 col-md-3 col-lg-2 mt-4`}>
-      <div><Image  className={styles.skillImg} src="/skills/expressjs.png" width={45} height={40} /></div><span>EXPRESS JS</span>
-    </div>
-    <div className={`${styles.skillCard} col-5 col-md-3 col-lg-2 mt-4`}>
-      <div><Image  className={styles.skillImg} src="/skills/Git-Icon.png" width={45} height={40} /></div><span>GIT</span>
-    </div>
-  </div>
-</div>
+    <section className='container-fluid my-5 py-5' id='skills' style={{ backgroundColor: "#F8F9FA" }}>
+      <div className="main-title text-center">
+        <h3>My Skills</h3>
+      </div>
+      <div className='row col-9 m-auto py-5 px-5 gap-5'>
+        <div className='skill-container'>
+          <i className="fa-brands fa-js" style={{ color: '#FFD43B', fontSize: "90px" }} />
+
+        </div>
+        <div className='skill-container' style={{ backgroundColor: "#183153" }}>
+          <i className="fa-brands fa-react" style={{ color: '#61d9fa', fontSize: "50px" }} />
+
+        </div>
+        <div className='skill-container' style={{ backgroundColor: "#183153" }}>
+          <i className="fa-brands fa-node" style={{ color: "#5DAC46", fontSize: "40px" }} />
+
+        </div>
+        <div className='skill-container' style={{ backgroundColor: "#183153" }}>
+          <i className="fa-brands fa-github" style={{ color: "#ffffff", fontSize: "40px" }} />
+
+        </div>
+        <div className='skill-container' style={{ backgroundColor: "#183153" }}>
+          <i className="fa-brands fa-docker" style={{ color: "#ffffff", fontSize: "40px" }} />
+
+        </div>
+        <div className='skill-container'  >
+          <img src='/images/typescript.png' style={{ width: "107px" }} />
+
+        </div>
+        <div className='skill-container' style={{ backgroundColor: "#ffffff" }}>
+          <img src='/images/next.png' style={{ width: "90%" }} />
+        </div>
+        <div className='skill-container' style={{ backgroundColor: "#ffffff" }}>
+          <i className="fa-brands fa-html5" style={{ color: '#e44f26', fontSize: "50px" }} />
+
+        </div>
+        <div className='skill-container' style={{ backgroundColor: "#ffffff" }}>
+          <i className="fa-brands fa-css3-alt" style={{ color: '#264de4', fontSize: "50px" }} />
+
+        </div>
+
+
+
+
+
+      </div>
+    </section>
 
   )
 }

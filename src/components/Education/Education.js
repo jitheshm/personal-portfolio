@@ -1,26 +1,65 @@
 import React from 'react'
-import styles from '../../styles/Education.module.css'
+
 function Education() {
     return (
-        <div className={`container-fluid ${styles.edu}`}>
-            <div className={`col-12 col-md-8 ${styles.educationContainer} mt-md-5 py-5`}>
-                <div className={`${styles.eduCard} col-8 col-lg-3 pt-2`}><i className="fa fa-university" />
-                    <h6 className="mt-4">MSC COMPUTER SCIENCE</h6>
-                    <h6 className="mt-2">University of Calicut</h6>
-                    <h6 className="mt-2">2021 - 2023</h6>
-                </div>
-                <div className={`${styles.eduCard} col-8 col-lg-3 pt-2`}><i className="fa fa-university" />
-                    <h6 className="mt-4">BSC MATHEMATICS</h6>
-                    <h6 className="mt-2">University of Calicut</h6>
-                    <h6 className="mt-2">2018 - 2021</h6>
-                </div>
-                <div className={`${styles.eduCard} col-8 col-lg-3 pt-2`}><i className="fa fa-university" />
-                    <h6 className="mt-4">HIGHER SECONDARY</h6>
-                    <h6 className="mt-2"><strong>DHSE Kerala</strong></h6>
-                    <h6 className="mt-2">2016 - 2018</h6>
+        <section className="section position-relative" id='education'>
+            <div className="container">
+                <div className="row">
+                    <div className="col-lg-12 text-center">
+                        <h3 className="section-title">Education</h3>
+                    </div>
+                    <div className="col-lg-6 col-md-6 mb-80">
+                        <div className="d-flex">
+                            <div className="mr-lg-5 mr-3">
+                                <i className="ti-medall icon icon-light icon-bg bg-white shadow rounded-circle d-block" />
+                            </div>
+                            <div>
+                                <p className="text-dark mb-1">2024</p>
+                                <h4>Full Stack Developer</h4>
+                                <p className="mb-0 text-light">Brototype</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col-lg-6 col-md-6 mb-80">
+                        <div className="d-flex">
+                            <div className="mr-lg-5 mr-3">
+                                <i className="ti-medall icon icon-light icon-bg bg-white shadow rounded-circle d-block" />
+                            </div>
+                            <div>
+                                <p className="text-dark mb-1">2023</p>
+                                <h4>MSC Computer Science</h4>
+                                <p className="mb-0 text-light">University of Calicut</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col-lg-6 col-md-6 mb-80">
+                        <div className="d-flex">
+                            <div className="mr-lg-5 mr-3">
+                                <i className="ti-medall icon icon-light icon-bg bg-white shadow rounded-circle d-block" />
+                            </div>
+                            <div>
+                                <p className="text-dark mb-1">2021</p>
+                                <h4>BSC Mathematics</h4>
+                                <p className="mb-0 text-light">University of Calicut</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col-lg-6 col-md-6 mb-80">
+                        <div className="d-flex">
+                            <div className="mr-lg-5 mr-3">
+                                <i className="ti-medall icon icon-light icon-bg bg-white shadow rounded-circle d-block" />
+                            </div>
+                            <div>
+                                <p className="text-dark mb-1">2018</p>
+                                <h4>Higer Secondary</h4>
+                                {/* <p className="mb-0 text-light">Cardiff School</p> */}
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
+
+        </section>
 
     )
 }

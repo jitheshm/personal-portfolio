@@ -1,15 +1,19 @@
 import React from 'react'
-import styles from '../../styles/ProjectCard.module.css'
 
-function ProjectCard({project}) {
+
+function ProjectCard({ project }) {
     return (
-        <div className={`col-8 col-md-5 col-lg-3 ${styles.projectCard} mt-5 px-2 pt-3`}>
-            <div className={styles.projectImage}><img src={project.imageUrl} width="100%" /></div>
-            <div className={`col-12 ${styles.projectCardBody} py-2`}>
-                <h6 className="mt-2">{project.name}</h6>
-                <h6 className="my-3">{project.category}</h6><button className={`btn ${styles.cardbtn}`}type="button">Read More</button>
+        <div className="col-lg-4 col-6 mb-4 shuffle-item px-4">
+            <div className="position-relative rounded hover-wrapper">
+                <img src={project.imageUrl} alt="portfolio-image" className="img-fluid rounded w-100" />
+                <div className="hover-overlay">
+                    <div className="hover-content">
+                        <a className="btn text-white" href="project-single.html">{project.name}</a>
+                    </div>
+                </div>
             </div>
-        </div>)
+        </div>
+    )
 }
 
 export default ProjectCard

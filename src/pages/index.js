@@ -1,12 +1,18 @@
 import Landing from '@/components/Landing/Landing'
 import Head from 'next/head'
+import { useEffect, useState } from 'react'
 
 
 
 
 
 
-export default function Home() {
+export default function Home({ projectData }) {
+  const [loading, setLoading] = useState(true)
+  useEffect(() => {
+    setLoading(false)
+  }, [])
+
   return (
     <>
       <Head>
@@ -16,8 +22,20 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main >
-        <Landing/>
+        <Landing projectData={projectData} />
+
       </main>
     </>
   )
+}
+export async function getServerSideProps() {
+  const response = await fetch(`${process.env.BASE_URL}/api/projects`)
+  const repo = await response.json()
+  //console.log(repo);
+  return {
+    props: {
+      admin: false,
+      projectData: repo.projects
+    }
+  }
 }

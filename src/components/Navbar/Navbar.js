@@ -1,17 +1,42 @@
 import Link from 'next/link'
 import React from 'react'
-import styles from '../../styles/Navbar.module.css'
+
 function Navbar() {
   return (
-    <div className={`${styles.navbar} navbar px-3`}>
-      <div className={styles.iconContainer}>
-      <Link href="/"> <div className={styles.icon}><i className="fas fa-home" /><span className={styles.iconName}>Home</span></div></Link>
-      <Link href="/about"> <div className={styles.icon}><i className="fas fa-user" /><span className={styles.iconName}>Personal</span></div></Link>
-      <Link href="/skills"> <div className={styles.icon}><i className="fas fa-lightbulb" /><span className={styles.iconName}>Skills</span></div></Link>
-      <Link href="/education"> <div className={styles.icon}><i className="fas fa-book-open" /><span className={styles.iconName}>Education</span></div></Link>
-      <Link href="/projects"> <div className={styles.icon}><i className="fas fa-desktop" /><span className={styles.iconName}>Projects</span></div></Link>
-      </div>
-    </div>
+    <header className="navigation fixed-top">
+      <nav className="navbar navbar-expand-lg navbar-dark">
+        <a className="navbar-brand font-tertiary h4" href="/">JITHESH</a>
+        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+          <span className="navbar-toggler-icon" />
+        </button>
+        <div className="collapse navbar-collapse text-center" id="navigation">
+          <ul className="navbar-nav ml-auto">
+            <li className="nav-item active">
+              <a className="nav-link" href="#">Home</a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="#about">about</a>
+            </li>
+
+            <li className="nav-item">
+              <a className="nav-link" href="#skills">Skills</a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="#education">Education</a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="#services">Services</a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="#projects">Projects</a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
 
   )
 }
