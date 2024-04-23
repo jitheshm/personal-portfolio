@@ -2,7 +2,7 @@ import React from 'react'
 
 function Footer() {
     return (
-        <footer className="bg-dark footer-section">
+        <footer className=" footer-section">
             <div className="section">
                 <div className="container">
                     <div className="row">
@@ -21,7 +21,7 @@ function Footer() {
                     </div>
                 </div>
             </div>
-            <div className="border-top text-center border-dark py-5">
+            <div className="border-top text-center  py-5">
                 <p className="mb-0 text-light">Copyright © a theme by Jithesh M</p>
             </div>
         </footer>

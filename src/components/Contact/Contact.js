@@ -17,7 +17,7 @@ function Contact() {
                         <h3 className="section-title text-white">Contact Info</h3>
                     </div>
                     <div className="col-lg-8 mx-auto">
-                        <div className="bg-white rounded text-center p-5 shadow-down">
+                        <div className="rounded text-center p-5 border">
                             <h4 className="mb-80">Contact Form</h4>
                             <form className="row" >
                                 <div className="col-md-6">

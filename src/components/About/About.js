@@ -18,7 +18,7 @@ function About() {
                             </p>
 
                         </div>
-                        <a href="#" className="primary-btn">More Info</a>
+                        {/* <a href="#" className="primary-btn">More Info</a> */}
                     </div>
                 </div>
             </div>

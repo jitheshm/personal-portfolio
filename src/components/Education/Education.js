@@ -11,10 +11,10 @@ function Education() {
                     <div className="col-lg-6 col-md-6 mb-80">
                         <div className="d-flex">
                             <div className="mr-lg-5 mr-3">
-                                <i className="ti-medall icon icon-light icon-bg bg-white shadow rounded-circle d-block" />
+                                <i className="ti-medall icon icon-light icon-bg  rounded-circle d-block" />
                             </div>
                             <div>
-                                <p className="text-dark mb-1">2024</p>
+                                <p className="text-white mb-1">2023 - Present</p>
                                 <h4>Full Stack Developer</h4>
                                 <p className="mb-0 text-light">Brototype</p>
                             </div>
@@ -23,10 +23,10 @@ function Education() {
                     <div className="col-lg-6 col-md-6 mb-80">
                         <div className="d-flex">
                             <div className="mr-lg-5 mr-3">
-                                <i className="ti-medall icon icon-light icon-bg bg-white shadow rounded-circle d-block" />
+                                <i className="ti-medall icon icon-light icon-bg  rounded-circle d-block" />
                             </div>
                             <div>
-                                <p className="text-dark mb-1">2023</p>
+                                <p className="text-white mb-1">2021 - 2023</p>
                                 <h4>MSC Computer Science</h4>
                                 <p className="mb-0 text-light">University of Calicut</p>
                             </div>
@@ -35,10 +35,10 @@ function Education() {
                     <div className="col-lg-6 col-md-6 mb-80">
                         <div className="d-flex">
                             <div className="mr-lg-5 mr-3">
-                                <i className="ti-medall icon icon-light icon-bg bg-white shadow rounded-circle d-block" />
+                                <i className="ti-medall icon icon-light icon-bg  rounded-circle d-block" />
                             </div>
                             <div>
-                                <p className="text-dark mb-1">2021</p>
+                                <p className="text-white mb-1">2018 - 2021</p>
                                 <h4>BSC Mathematics</h4>
                                 <p className="mb-0 text-light">University of Calicut</p>
                             </div>
@@ -47,11 +47,11 @@ function Education() {
                     <div className="col-lg-6 col-md-6 mb-80">
                         <div className="d-flex">
                             <div className="mr-lg-5 mr-3">
-                                <i className="ti-medall icon icon-light icon-bg bg-white shadow rounded-circle d-block" />
+                                <i className="ti-medall icon icon-light icon-bg  rounded-circle d-block" />
                             </div>
                             <div>
-                                <p className="text-dark mb-1">2018</p>
-                                <h4>Higer Secondary</h4>
+                                <p className="text-white mb-1">2016 - 2018</p>
+                                <h4>Higher Secondary</h4>
                                 {/* <p className="mb-0 text-light">Cardiff School</p> */}
                             </div>
                         </div>

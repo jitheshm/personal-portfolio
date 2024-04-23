@@ -4,7 +4,7 @@ import React from 'react'
 
 function Skills() {
   return (
-    <section className='container-fluid my-5 py-5' id='skills' style={{ backgroundColor: "#F8F9FA" }}>
+    <section className='container-fluid my-5 py-5' id='skills' >
       <div className="main-title text-center">
         <h3>My Skills</h3>
       </div>

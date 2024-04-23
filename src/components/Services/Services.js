@@ -9,7 +9,7 @@ function Services() {
                         <h3 className="section-title">Services</h3>
                     </div>
                     <div className="col-md-4 mb-4 mb-md-0">
-                        <div className="card active-bg-primary hover-shadow shadow">
+                        <div className="card active-bg-primary ">
                             <div className="card-body text-center px-4 py-5">
                                 <i className="ti-palette icon mb-5 d-inline-block" />
                                 <h4 className="mb-4">Web application development</h4>
@@ -18,7 +18,7 @@ function Services() {
                         </div>
                     </div>
                     <div className="col-md-4 mb-4 mb-md-0">
-                        <div className="card active-bg-primary hover-shadow shadow">
+                        <div className="card active-bg-primary ">
                             <div className="card-body text-center px-4 py-5">
                                 <i className="ti-vector icon mb-5 d-inline-block" />
                                 <h4 className="mb-4">React application development</h4>
@@ -27,7 +27,7 @@ function Services() {
                         </div>
                     </div>
                     <div className="col-md-4 mb-4 mb-md-0">
-                        <div className="card active-bg-primary hover-shadow shadow">
+                        <div className="card active-bg-primary ">
                             <div className="card-body text-center px-4 py-5">
                                 <i className="ti-panel icon mb-5 d-inline-block" />
                                 <h4 className="mb-4">Static websites</h4>

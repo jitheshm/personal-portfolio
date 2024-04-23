@@ -23,13 +23,14 @@ body {
   font-family: "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
   font-size: 15px;
-  color: #4c4c4c;
+  color: #ffffff!important;
+  background-color: #000!important;
 }
 
 p,
 .paragraph {
   font-weight: 400;
-  color: #4c4c4c;
+  color: #ffffff;
   font-size: 15px;
   line-height: 1.8;
   font-family: "Roboto", sans-serif;
@@ -46,7 +47,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: #222222;
+  color: #ffffff;
   /* font-family: "Playfair Display", serif; */
   font-family: "Poppins", sans-serif;
   font-weight: 700;
@@ -135,16 +136,19 @@ h6,
 }
 
 .btn-primary {
-  background: #41228e;
+  background: #000000;
   color: #fff;
 }
 
 .btn-primary:active {
-  background: #542cb7 !important;
+  background: #ffffff !important;
+  color: #000;
+  
 }
 
 .btn-primary:hover {
-  background: #542cb7;
+  background: #ffffff;
+  color: #000;
 }
 
 .btn-primary.focus,
@@ -155,27 +159,27 @@ h6,
 
 .btn-transparent {
   background: transparent;
-  color: #41228e;
+  color: #000000;
   font-weight: bold;
 }
 
 .btn-transparent:active,
 .btn-transparent:hover {
-  color: #41228e;
+  color: #000000;
 }
 
 body {
-  background-color: #fff;
+  /* background-color: #fff; */
   overflow-x: hidden;
 }
 
 ::-moz-selection {
-  background: #542cb7;
+  background: #000000;
   color: #fff;
 }
 
 ::selection {
-  background: #542cb7;
+  background: #000000;
   color: #fff;
 }
 
@@ -224,11 +228,11 @@ select:focus {
 }
 
 a.text-dark:hover {
-  color: #41228e !important;
+  color: #000000 !important;
 }
 
 a:hover {
-  color: #41228e;
+  color: #000000;
 }
 
 .slick-slide {
@@ -276,7 +280,7 @@ a:hover {
 }
 
 .bg-primary {
-  background: #41228e !important;
+  background: #000000 !important;
 }
 
 .bg-gray {
@@ -284,7 +288,7 @@ a:hover {
 }
 
 .text-primary {
-  color: #41228e !important;
+  color: #000000 !important;
 }
 
 .text-color {
@@ -414,6 +418,8 @@ a:hover {
 /* /slick slider */
 /* form */
 .form-control {
+  background-color: #000;
+  color: #fff;
   border: 0;
   border-radius: 0;
   border-bottom: 1px solid #c7c7c7;
@@ -421,7 +427,9 @@ a:hover {
 }
 
 .form-control:focus {
-  border-color: #41228e;
+  background-color: #000;
+  /* border-color: #000000; */
+  color: #fff;
   outline: 0;
   box-shadow: none !important;
 }
@@ -451,7 +459,7 @@ textarea.form-control {
 }
 
 .navigation.nav-bg {
-  background-color: #41228e;
+  background-color: #000000;
   padding: 15px 100px;
 }
 
@@ -464,7 +472,7 @@ textarea.form-control {
 @media (max-width: 991px) {
   .navigation {
     padding: 20px;
-    background: #41228e;
+    background: #000000;
   }
 }
 
@@ -662,7 +670,7 @@ textarea.form-control {
 }
 
 .hover-bg-primary:hover {
-  background: #41228e;
+  background: #000000;
 }
 
 .hover-bg-primary:hover * {
@@ -671,7 +679,7 @@ textarea.form-control {
 
 .active-bg-primary {
   transition: .3s ease;
-  background: #41228e;
+  background: #000000;
 }
 
 .active-bg-primary * {
@@ -822,7 +830,7 @@ blockquote {
   display: inline-block;
   padding: 10px 20px;
   background: #eaeaea;
-  border-left: 2px solid #41228e;
+  border-left: 2px solid #000000;
   font-style: italic;
   font-size: 22px;
 }
