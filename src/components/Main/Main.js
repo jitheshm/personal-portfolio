@@ -6,7 +6,7 @@ function Main() {
             <div className="container">
                 <div className="row">
                     <div className="col-lg-6 mx-auto hero-area-left">
-                        <h1 className="text-white font-tertiary">Hi! I’m <br /> <span style={{color:"red"}}>JITHESH</span> <br /> MERN DEVELOPER</h1>
+                        <h1 className="text-white font-tertiary text-center text-md-left">Hi! I’m <br /> <span style={{color:"red"}}>JITHESH</span> <br /> MERN DEVELOPER</h1>
                     </div>
                     <div className='col-lg-6 hero-area-right d-none d-lg-block'>
                         <img src='/images/robot.png' style={{ height: "50%" }} />

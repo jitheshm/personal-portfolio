@@ -3,7 +3,7 @@ import React from 'react'
 
 function ProjectCard({ project }) {
     return (
-        <div className="col-lg-4 col-6 mb-4 shuffle-item px-4">
+        <div className="col-lg-4 col-md-6 col-12 mb-4 shuffle-item px-4">
             <div className="position-relative rounded hover-wrapper">
                 <img src={project.imageUrl} alt="portfolio-image" className="img-fluid rounded w-100" />
                 <div className="hover-overlay">

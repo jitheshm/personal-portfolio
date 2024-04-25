@@ -22,6 +22,7 @@ export default function Document() {
         <Main />
         <NextScript />
         <script src="plugins/jQuery/jquery.min.js"></script>
+        <script src="plugins/bootstrap/bootstrap.min.js"></script>
         <script src="js/script.js"></script>
       </body>
     </Html>

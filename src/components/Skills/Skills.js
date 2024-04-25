@@ -8,7 +8,7 @@ function Skills() {
       <div className="main-title text-center">
         <h3>My Skills</h3>
       </div>
-      <div className='row col-9 m-auto py-5 px-5 gap-5'>
+      <div className='row col-md-9 m-auto py-5 gap-4 px-3 px-md-5 gap-md-5'>
         <div className='skill-container'>
           <i className="fa-brands fa-js" style={{ color: '#FFD43B', fontSize: "90px" }} />
 
